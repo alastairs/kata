@@ -6,14 +6,14 @@ namespace Anagrams
 {
     public class AnagramGenerator
     {
-        public IEnumerable<string> Generate(string empty)
+        public IEnumerable<string> Generate(string originalWord)
         {
-            if (empty.Length < 2)
+            if (originalWord.Length < 2)
             {
-                return Enumerable.Empty<string>();
+                yield break;
             }
 
-            return new[] {"ba"};
+            yield return "ba";
         }
     }
 }
