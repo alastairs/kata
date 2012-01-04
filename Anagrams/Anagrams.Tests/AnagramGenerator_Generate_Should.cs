@@ -77,6 +77,17 @@ namespace Anagrams.Tests
 
             Assert.That(generatedAnagrams, Contains.Item("bac"));
         }
+
+        [Test]
+        public void NotReturnTheOriginalWordInTheOutput()
+        {
+            var anagrams = new AnagramGenerator();
+            const string originalWord = "abc";
+
+            var generatedAnagrams = anagrams.Generate(originalWord).ToList();
+
+            CollectionAssert.DoesNotContain(generatedAnagrams, originalWord);
+        }
     }
     // ReSharper restore InconsistentNaming
 }

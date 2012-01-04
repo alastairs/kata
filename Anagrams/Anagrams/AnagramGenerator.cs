@@ -17,7 +17,6 @@ namespace Anagrams
             
             if (originalWord.Length == 3)
             {
-                // Input ABC
                 foreach (var character in originalWord)
                 {
                     char currentCharacter = character;
