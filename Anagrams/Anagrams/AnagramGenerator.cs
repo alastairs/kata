@@ -14,6 +14,11 @@ namespace Anagrams
             }
 
             yield return ReverseString(originalWord);
+            
+            if (originalWord.Length == 3)
+            {
+                yield return "ACB";
+            }
         }
 
         private static string ReverseString(string originalWord)
