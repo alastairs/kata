@@ -88,6 +88,16 @@ namespace Anagrams.Tests
 
             CollectionAssert.DoesNotContain(generatedAnagrams, originalWord);
         }
+
+        [Test]
+        public void NotReturnDuplicateAnagrams()
+        {
+            var anagrams = new AnagramGenerator();
+
+            var generatedAnagrams = anagrams.Generate("abc").ToList();
+
+            CollectionAssert.AllItemsAreUnique(generatedAnagrams);
+        }
     }
     // ReSharper restore InconsistentNaming
 }
