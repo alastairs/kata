@@ -15,6 +15,16 @@ namespace Anagrams.Tests
 
             CollectionAssert.IsEmpty(generatedAnagrams);
         }
+
+        [Test]
+        public void ReturnAnEmptyCollection_WhenGivenASingletonString()
+        {
+            var anagrams = new AnagramGenerator();
+
+            var generatedAnagrams = anagrams.Generate("a");
+
+            CollectionAssert.IsEmpty(generatedAnagrams);
+        }
     }
     // ReSharper restore InconsistentNaming
 }
