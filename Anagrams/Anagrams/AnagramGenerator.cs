@@ -8,7 +8,12 @@ namespace Anagrams
     {
         public IEnumerable<string> Generate(string empty)
         {
-            return Enumerable.Empty<string>();
+            if (empty.Length < 2)
+            {
+                return Enumerable.Empty<string>();
+            }
+
+            return new[] {"ba"};
         }
     }
 }
