@@ -23,7 +23,12 @@ namespace Anagrams
                     var originalWordLessOneCharacter = ConvertEnumerableOfCharToString(originalWord.Where(c => c != currentCharacter));
 
                     yield return character + ReverseString(originalWordLessOneCharacter);
-                    yield return character + originalWordLessOneCharacter;
+
+                    var transposition = character + originalWordLessOneCharacter;
+                    if (transposition != originalWord)
+                    {
+                        yield return transposition;
+                    }
                 }
             }
         }
