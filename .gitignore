@@ -1,0 +1,6 @@
+_ReSharper.*
+*.dotCover
+*.ReSharper.user
+*.TeamCity.user
+*.suo
+*.cache
