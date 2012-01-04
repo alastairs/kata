@@ -13,7 +13,12 @@ namespace Anagrams
                 yield break;
             }
 
-            yield return new string(originalWord.Reverse().ToArray());
+            yield return ReverseString(originalWord);
+        }
+
+        private static string ReverseString(string originalWord)
+        {
+            return new string(originalWord.Reverse().ToArray());
         }
     }
 }
