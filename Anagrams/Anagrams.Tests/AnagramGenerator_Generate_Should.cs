@@ -65,7 +65,7 @@ namespace Anagrams.Tests
 
             var generatedAnagrams = anagrams.Generate("abc").ToList();
 
-            Assert.That(generatedAnagrams, Contains.Item("ACB"));
+            Assert.That(generatedAnagrams, Contains.Item("acb"));
         }
 
         [Test]
@@ -75,7 +75,7 @@ namespace Anagrams.Tests
 
             var generatedAnagrams = anagrams.Generate("abc").ToList();
 
-            Assert.That(generatedAnagrams, Contains.Item("BAC"));
+            Assert.That(generatedAnagrams, Contains.Item("bac"));
         }
     }
     // ReSharper restore InconsistentNaming

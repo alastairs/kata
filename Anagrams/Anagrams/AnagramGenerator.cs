@@ -17,14 +17,26 @@ namespace Anagrams
             
             if (originalWord.Length == 3)
             {
-                yield return "ACB";
-                yield return "BAC";
+                // Input ABC
+                foreach (var character in originalWord)
+                {
+                    char currentCharacter = character;
+                    var originalWordLessOneCharacter = ConvertEnumerableOfCharToString(originalWord.Where(c => c != currentCharacter));
+
+                    yield return character + ReverseString(originalWordLessOneCharacter);
+                    yield return character + originalWordLessOneCharacter;
+                }
             }
+        }
+
+        private static string ConvertEnumerableOfCharToString(IEnumerable<char> enumerable)
+        {
+            return new string(enumerable.ToArray());
         }
 
         private static string ReverseString(string originalWord)
         {
-            return new string(originalWord.Reverse().ToArray());
+            return ConvertEnumerableOfCharToString(originalWord.Reverse());
         }
     }
 }
