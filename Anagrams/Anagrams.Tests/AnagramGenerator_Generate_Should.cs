@@ -67,6 +67,16 @@ namespace Anagrams.Tests
 
             Assert.That(generatedAnagrams, Contains.Item("ACB"));
         }
+
+        [Test]
+        public void ReturnTheStringBACInTheOutput_WhenTheInputStringIsABC()
+        {
+            var anagrams = new AnagramGenerator();
+
+            var generatedAnagrams = anagrams.Generate("abc").ToList();
+
+            Assert.That(generatedAnagrams, Contains.Item("BAC"));
+        }
     }
     // ReSharper restore InconsistentNaming
 }
