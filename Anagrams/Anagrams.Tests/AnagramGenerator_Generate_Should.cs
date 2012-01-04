@@ -9,7 +9,7 @@ namespace Anagrams.Tests
         [Test]
         public void ReturnAnEmptyCollection_WhenGivenAnEmptyString()
         {
-            var anagrams = new Anagrams.AnagramGenerator();
+            var anagrams = new AnagramGenerator();
 
             var generatedAnagrams = anagrams.Generate(string.Empty);
 
