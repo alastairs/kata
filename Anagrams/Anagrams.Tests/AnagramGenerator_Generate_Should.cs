@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.Collections.Generic;
+using System.Linq;
+using NUnit.Framework;
 
 namespace Anagrams.Tests
 {
@@ -34,6 +36,16 @@ namespace Anagrams.Tests
             var generatedAnagrams = anagrams.Generate("ab");
 
             CollectionAssert.Contains(generatedAnagrams, "ba");
+        }
+
+        [Test]
+        public void ReturnOnlyOneAnagram_WhenTheStringIsTwoLetters()
+        {
+            var anagrams = new AnagramGenerator();
+
+            var generatedAnagrams = anagrams.Generate("ab").ToList();
+
+            Assert.That(generatedAnagrams, Has.Count.EqualTo(1));
         }
     }
     // ReSharper restore InconsistentNaming
