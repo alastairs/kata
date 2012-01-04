@@ -13,9 +13,11 @@ namespace Anagrams
                 yield break;
             }
 
-            var generatedAnagrams = new List<string>();
+            var generatedAnagrams = new List<string>
+                                        {
+                                            originalWord, ReverseString(originalWord)
+                                        };
 
-            generatedAnagrams.Add(ReverseString(originalWord));
             yield return ReverseString(originalWord);
             
             if (originalWord.Length == 3)
@@ -33,7 +35,7 @@ namespace Anagrams
                     }
 
                     transposition = character + originalWordLessOneCharacter;
-                    if (transposition != originalWord && !generatedAnagrams.Contains(transposition))
+                    if (!generatedAnagrams.Contains(transposition))
                     {
                         generatedAnagrams.Add(transposition);
                         yield return transposition;
