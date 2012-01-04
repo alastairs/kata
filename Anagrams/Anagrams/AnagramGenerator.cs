@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Anagrams
 {
     public class AnagramGenerator
     {
+        public IEnumerable<string> Generate(string empty)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
