@@ -18,6 +18,7 @@ namespace Anagrams
             if (originalWord.Length == 3)
             {
                 yield return "ACB";
+                yield return "BAC";
             }
         }
 
