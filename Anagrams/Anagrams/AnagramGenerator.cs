@@ -13,7 +13,7 @@ namespace Anagrams
                 yield break;
             }
 
-            yield return "ba";
+            yield return new string(originalWord.Reverse().ToArray());
         }
     }
 }
