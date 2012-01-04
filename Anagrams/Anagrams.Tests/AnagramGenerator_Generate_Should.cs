@@ -25,6 +25,16 @@ namespace Anagrams.Tests
 
             CollectionAssert.IsEmpty(generatedAnagrams);
         }
+
+        [Test]
+        public void ReturnTheReverseOfTheString_WhenTheStringIsTwoLetters()
+        {
+            var anagrams = new AnagramGenerator();
+
+            var generatedAnagrams = anagrams.Generate("ab");
+
+            CollectionAssert.Contains(generatedAnagrams, "ba");
+        }
     }
     // ReSharper restore InconsistentNaming
 }
