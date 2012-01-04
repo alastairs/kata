@@ -6,3 +6,5 @@ _ReSharper.*
 *.cache
 *.crunch*
 packages/
+[Bb]in/
+[Oo]bj/
