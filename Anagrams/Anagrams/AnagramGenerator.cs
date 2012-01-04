@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Anagrams
 {
@@ -7,7 +8,7 @@ namespace Anagrams
     {
         public IEnumerable<string> Generate(string empty)
         {
-            throw new NotImplementedException();
+            return Enumerable.Empty<string>();
         }
     }
 }
